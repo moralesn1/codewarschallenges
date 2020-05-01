@@ -14,16 +14,13 @@
 function accum(s) {
   let stringArray = s.split("");
   let newArray = stringArray.map(valueToIndexRepeater);
-  return newArray;
-
-  // for (i in stringArray) {
-  //   return (i = stringArray[0].toUpperCase() + i.substr(1).toLowerCase());
-  // }
+  return newArray.join().replace(/,/g, "-");
 }
 
 const valueToIndexRepeater = (item, index) => {
   return item.repeat(index + 1);
 };
+
 console.log(accum("abcd"));
 //  -> "A-Bb-Ccc-Dddd"
 
