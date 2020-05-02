@@ -10,8 +10,8 @@ function accum(s) {
     return "";
   } else {
     let stringArray = s.split("");
-    let newArray = stringArray.map(valueToIndexRepeater);
-    return newArray.join().replace(/,/g, "-");
+    let newArray = stringArray.map(valueToIndexRepeater).join("-");
+    return newArray;
   }
 }
 
