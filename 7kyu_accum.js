@@ -1,24 +1,30 @@
-// function accum(s) {
-//   let stringArray = s.split("");
-//   let emptyArray = [];
-//   for (i = 0; i < stringArray.length; i++) {
-//     let newElement = stringArray[i].toString();
-//     emptyArray.push(newElement);
-//   }
-//   return emptyArray.map((item, index) => {
-//     return item.repeat(index + 1);
-//   });
-// }
-// return stringArray;
+//This time no story, no theory. The examples below show you how to write function accum:
+// Examples:
+
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
 
 function accum(s) {
-  let stringArray = s.split("");
-  let newArray = stringArray.map(valueToIndexRepeater);
-  return newArray.join().replace(/,/g, "-");
+  if (s.length === "") {
+    return "";
+  } else {
+    let stringArray = s.split("");
+    let newArray = stringArray.map(valueToIndexRepeater);
+    return newArray.join().replace(/,/g, "-");
+  }
 }
 
 const valueToIndexRepeater = (item, index) => {
-  return item.repeat(index + 1);
+  let element = item.repeat(index + 1);
+  if (element.length >= 1) {
+    return capitalise(element);
+  }
+  return element;
+};
+
+const capitalise = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 };
 
 console.log(accum("abcd"));
