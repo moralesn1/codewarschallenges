@@ -26,3 +26,15 @@ console.log(gimme([5, 10, 14]));
 // Should return 1
 console.log(gimme([22, -40, -26]));
 // Should return 2
+
+/*
+Top Solutions:
+
+function gimme(a){
+  return a.indexOf(a.concat().sort(function(a,b) { return a - b })[1])
+}
+
+const gimme = function (arr){
+  return arr.indexOf([...arr].sort((x,y) => x > y)[1]);
+}
+*/

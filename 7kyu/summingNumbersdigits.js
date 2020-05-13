@@ -16,3 +16,5 @@ console.log(sumDigits(0), 0);
 
 // TOP SOLUTION
 // return Math.abs(number).toString().split('').reduce((a,b) => +a + +b, 0)
+
+// I learnt about Math.abs() function after a 13 hour shift at work :)
