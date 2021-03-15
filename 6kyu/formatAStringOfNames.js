@@ -77,10 +77,10 @@ Test.assertEquals(
 );
 Test.assertEquals(list([]), "", "Must work with no names");
 
-// TOP SOLUTION
+//
 
 function list(names) {
-  return names.reduce(function (prev, current, index, array) {
+  return names.reduce((prev, current, index, array) => {
     if (index === 0) {
       return current.name;
     } else if (index === array.length - 1) {

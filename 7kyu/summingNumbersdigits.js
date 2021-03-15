@@ -18,3 +18,15 @@ console.log(sumDigits(0), 0);
 // return Math.abs(number).toString().split('').reduce((a,b) => +a + +b, 0)
 
 // I learnt about Math.abs() function after a 13 hour shift at work :)
+
+// My Solution 15/03/21
+
+function sumDigits(number) {
+  const numbersArray = number.toString().replace("-", "").split("");
+  const pureNumbers = numbersArray.map((a) => parseInt(a));
+  const sumOfPureNumbers = pureNumbers.reduce((a, b) => a + b);
+  return sumOfPureNumbers;
+}
+
+// Reading my notes, I have no idea wtf Math.abs() does.
+// Unary + converts the item to it's right to a Number. Example: +"5" === 5

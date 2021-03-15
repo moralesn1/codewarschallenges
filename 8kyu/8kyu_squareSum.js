@@ -20,6 +20,12 @@ function squared(number) {
   return number * number;
 }
 
+function squareSum(numbers) {
+  const squaredArray = numbers.map((x) => x * x);
+  const totalSquared = squaredArray.reduce((a, b) => a + b, 0);
+  return totalSquared;
+}
+
 console.log(squareSum([1, 2]));
 console.log(squareSum([0, 3, 4, 5]));
 console.log(squareSum([]));
