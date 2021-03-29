@@ -38,3 +38,7 @@ const gimme = function (arr){
   return arr.indexOf([...arr].sort((x,y) => x > y)[1]);
 }
 */
+
+const gimme = (inputArray) => {
+  return inputArray.indexOf([...inputArray].sort((a, b) => a - b)[1]);
+};
