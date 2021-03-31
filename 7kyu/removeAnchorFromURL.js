@@ -15,8 +15,12 @@ function removeUrlAnchor(url) {
 
 // top solution
 
-function removeUrlAnchor(url){
-//   return url.split('#')[0];
-// }
+function removeUrlAnchor(url) {
+  //   return url.split('#')[0];
+}
+
+function removeUrlAnchor(url) {
+  return url.split("#")[0];
+}
 
 removeUrlAnchor("www.codewars.com#about"), "www.codewars.com";

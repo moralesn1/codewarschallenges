@@ -30,3 +30,12 @@ function sum(numbers) {
   }
   return total;
 }
+
+//
+function sum(numbers) {
+  return numbers.reduce(add, 0);
+}
+
+const add = (el1, el2) => {
+  return el1 + el2;
+};

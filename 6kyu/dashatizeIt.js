@@ -55,3 +55,13 @@ function dashatize(num) {
     .replace(/--+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
+
+// new
+function dashatize(num) {
+  return num
+    .toString()
+    .replace(/^-/g, "")
+    .replace(/([13579])/g, "-$1-")
+    .replace(/(^-|-$)/g, "")
+    .replace(/(--)/g, "-");
+}

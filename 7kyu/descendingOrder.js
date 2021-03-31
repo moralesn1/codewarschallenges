@@ -34,6 +34,14 @@ function descendingOrder(n) {
   );
 }
 
+function descendingOrder(n) {
+  const number = String(n)
+    .split("")
+    .sort((a, b) => b - a)
+    .join("");
+  return parseInt(number);
+}
+
 descendingOrder(0); // 0
 descendingOrder(1); // 1
 descendingOrder(123456789); // 987654321

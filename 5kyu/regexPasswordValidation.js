@@ -12,6 +12,10 @@ function validate(password) {
   return regexTest.test(password);
 }
 
+function validate(password) {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{6,}$/.test(password);
+}
+
 validate("djI38D55"), "djI38D55 - Expected true";
 !validate("a2.d412"), "a2.d412 - Expected false";
 !validate("JHD5FJ53"), "JHD5FJ53 - Expected false";

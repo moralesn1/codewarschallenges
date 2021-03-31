@@ -26,6 +26,13 @@ function squareSum(numbers) {
   return totalSquared;
 }
 
+//31/03/21
+function squareSum(numbers) {
+  return numbers.reduce((acc, curr) => {
+    return curr * curr + acc;
+  }, 0);
+}
+
 console.log(squareSum([1, 2]));
 console.log(squareSum([0, 3, 4, 5]));
 console.log(squareSum([]));

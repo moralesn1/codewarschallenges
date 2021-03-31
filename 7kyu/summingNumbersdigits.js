@@ -30,3 +30,9 @@ function sumDigits(number) {
 
 // Reading my notes, I have no idea wtf Math.abs() does.
 // Unary + converts the item to it's right to a Number. Example: +"5" === 5
+
+function sumDigits(number) {
+  let stringArray = number.toString().replace("-", "").split("");
+  let numberArray = stringArray.map((item) => Number(item));
+  return numberArray.reduce((a, b) => a + b);
+}

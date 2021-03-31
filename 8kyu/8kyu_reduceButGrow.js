@@ -19,3 +19,7 @@ console.log(grow([4, 1, 1, 1, 4]));
 console.log(grow([2, 2, 2, 2, 2, 2]));
 // 64
 console.log(grow(["a", 2, 2, 3, 2, 2, 2]));
+
+function grow(x) {
+  return x.reduce((firstVal, secondVal) => firstVal * secondVal);
+}
